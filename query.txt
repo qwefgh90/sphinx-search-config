@@ -1,0 +1,5 @@
+| = OR operator
+no | = And (anywhere in document)
+SELECT fileName, Weight() FROM Document where match('"*신규설치과제*" "*기업부설연구소*"') option ranker=bm25;
+SELECT id, fileName, weight() FROM Document where match('"*기업부설*" | "*호서대학교*" | "*신규설치*" | "*SO*"') option ranker=bm25;
+SELECT id, fileName, weight() FROM Document where match('"*신규설치*" "*기업부설*" ') option ranker=bm25;
